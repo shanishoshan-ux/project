@@ -6,7 +6,6 @@
 
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -84,9 +83,9 @@ footer {
 }
 .social-container {
     display: flex;
-    justify-content: center; /* מרכז את כל הקבוצה */
+    justify-content: center; 
     align-items: center;
-    gap: 40px; /* מקרב ביניהם */
+    gap: 40px;
     width: 100%;
 }
 .logo {
@@ -142,3 +141,76 @@ img {
         color: black;
         text-decoration: none;
     }
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: floralwhite;
+    color: dodgerblue;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    flex-wrap: wrap;
+}
+
+.item-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 300px; 
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 20px;
+}
+
+    .item-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .item-card h3 {
+        margin: 0 0 10px;
+        color: steelblue;
+    }
+
+    .item-card p {
+        margin: 0 0 15px;
+        flex-grow: 1;
+    }
+
+    .item-card a {
+        color:indianred;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .item-card button {
+        background-color:indianred;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+        .item-card button:hover {
+            background-color: black;
+        }
+
+.extra-info {
+    font-size: 0.8em;
+    color: gray;
+}
