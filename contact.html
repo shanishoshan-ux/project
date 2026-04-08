@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+       
+        
+        <section class="contact-info container">
+            <h2>>ליצירת קשר ועוד מידע-</h2>
+            <p>Email: shanishoshan@rabinky.co.il</p>
+            
+
+        </section>
+
+        
+        <section class="contact-form container">
+            <h2>Send us a message</h2>
+
+            <form id="contactForm">
+
+                <label>Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label>Email:</label>
+                <input type="email" id="email" required>
+
+                <label>Phone:</label>
+                <input type="text" id="phone" required>
+
+                <label>Subject:</label>
+                <input type="text" id="subject" required>
+
+                <label>Message:</label>
+                <textarea id="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let subject = document.getElementById("subject").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+           
+            if (name.length < 3) {
+                alert("Name must be at least 3 characters");
+                return;
+            }
+
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert("Invalid email");
+                return;
+            }
+
+            let phonePattern = /^[0-9]{10,}$/;
+            if (!phone.match(phonePattern)) {
+                alert("Phone must be at least 10 digits");
+                return;
+            }
+
+            if (subject.length < 5) {
+                alert("Subject must be at least 5 characters");
+                return;
+            }
+
+            if (message.length < 10) {
+                alert("Message must be at least 10 characters");
+                return;
+            }
+
+            alert("Message sent successfully! ✅");
+        });
+    </script>
+
+</body>
+</html>
