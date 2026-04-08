@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // script.js
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // מונע את שליחת הטופס באופן אוטומטי
@@ -27,3 +28,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         console.error('Error:', error);
     });
 });
+=======
+console.log("hello");
+>>>>>>> b2742e69d0bc15d7f0bf494f2497f38334e68837
